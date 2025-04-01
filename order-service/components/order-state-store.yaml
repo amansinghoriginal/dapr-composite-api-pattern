@@ -1,0 +1,20 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: order-state-store
+  annotations:
+    dapr.io/scopes: "order-service"
+spec:
+  type: state.postgresql
+  version: v1
+  metadata:
+  - name: connectionString
+    value: "host=order-postgres-service user=postgres password=postgres port=5432 dbname=orderdb sslmode=disable"
+  - name: tableName
+    value: "order_state"
+  - name: metadataTableName
+    value: "order_metadata"
+  - name: keyPrefix
+    value: "order:"
+  - name: keyType
+    value: "string"

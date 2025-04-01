@@ -1,0 +1,18 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: drasi-state-store
+spec:
+  type: state.postgresql
+  version: v1
+  metadata:
+  - name: connectionString
+    value: "host=drasi-postgres-service user=postgres password=postgres port=5432 dbname=drasidb sslmode=disable"
+  - name: tableName
+    value: "drasi_state"
+  - name: metadataTableName
+    value: "drasi_metadata"
+  - name: keyPrefix
+    value: "user:"
+  - name: keyType
+    value: "string"

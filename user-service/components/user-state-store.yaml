@@ -1,0 +1,20 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: user-state-store
+  annotations:
+    dapr.io/scopes: "user-service"
+spec:
+  type: state.postgresql
+  version: v1
+  metadata:
+  - name: connectionString
+    value: "host=user-postgres-service user=postgres password=postgres port=5432 dbname=userdb sslmode=disable"
+  - name: tableName
+    value: "user_state"
+  - name: metadataTableName
+    value: "user_metadata"
+  - name: keyPrefix
+    value: "user:"
+  - name: keyType
+    value: "string"
