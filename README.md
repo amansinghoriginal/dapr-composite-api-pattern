@@ -1,4 +1,4 @@
-# Dapr Microservices Project
+# Dapr Composite API Pattern
 
 This project contains five microservices built with Dapr for state management and service invocation.
 All services are deployed on a local kind Kubernetes cluster with PostgreSQL databases configured as their state stores.
