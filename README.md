@@ -8,8 +8,8 @@ All services are deployed on a local kind Kubernetes cluster with PostgreSQL dat
 1. **User Service**: Manages user profiles
 2. **Order Service**: Manages orders placed by users
 3. **Product Service**: Manages product information
-4. **Profile-With-Orders-Direct**: Aggregates user profiles with orders using direct API calls
-5. **Profile-With-Orders-Drasi**: Provides the same aggregated view using Drasi
+4. **All-Details-Direct**: Aggregates user info with order details using direct API calls
+5. **All-Details-Drasi**: Provides the same aggregated view using Drasi
 
 ## Prerequisites
 Before you begin, ensure you have the following tools installed:
